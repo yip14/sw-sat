@@ -1,0 +1,17 @@
+cd ~
+mkdir hw1
+cd hw1
+touch commands.txt
+git init
+git add commands.txt
+git commit -m "First Commit"
+curl -o twocities.txt https://twomorecents.org/files/twocities.txt
+ls
+grep '"[^"]*"' twocities.txt
+grep -P '"[^"]*"' twocities.txt
+grep -Po '"[^"]*"' twocities.txt > twocities_quotes.txt
+grep -Po '\b\w+\.' twocities.txt > twocities_sentence_endings.txt
+grep -Po '\b\w{5}\.' twocities.txt > twocities_five_letters.txt
+grep -Po '\b\w{17}\b' twocities.txt
+ls
+grep -c 'CHAPTER' twocities.txt
